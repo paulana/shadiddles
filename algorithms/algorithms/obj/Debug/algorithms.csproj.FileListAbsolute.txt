@@ -1,0 +1,2 @@
+C:\Users\u59a54\AppData\Local\Temporary Projects\algorithms\bin\Debug\algorithms.exe.config
+C:\PMT\shadiddles\algorithms\algorithms\bin\Debug\algorithms.exe.config
