@@ -32,6 +32,7 @@ namespace algorithms
                     break;
 
                 case "demos":
+                    Demo();
                     break;
             }
 
