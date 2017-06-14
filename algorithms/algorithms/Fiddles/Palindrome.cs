@@ -13,10 +13,10 @@ namespace algorithms.Fiddles
             bool palindrome = true;
             int i;
             int k;
-            string input = word.ToLower().Replace(" ", String.Empty).Replace();
+            string input = word.ToLower().Replace(" ", String.Empty);
             for (i = 0; i < input.Length; i++)
             {
-                for (k = input.Length - 1 - (1*i); k > i; k--)
+                for (k = input.Length - 1 - (1*i); k >= i; k--)
                 {
                     if (input.ElementAt(i) != input.ElementAt(k))
                     {
@@ -39,25 +39,26 @@ namespace algorithms.Fiddles
             Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Deleveled"));
             Console.WriteLine("\nRacecar");
             Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Racecar"));
-            Console.WriteLine("\nDeleveled");
-            Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Deleveled"));
-            Console.WriteLine("\nDeleveled");
-            Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Deleveled"));
-            Console.WriteLine("\nDeleveled");
-            Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Deleveled"));
-            Console.WriteLine("\nDeleveled");
-            Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Deleveled"));
+            Console.WriteLine("\nKayak");
+            Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Kayak"));
+            Console.WriteLine("\nRats live on no evil star");
+            Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Rats live on no evil star"));
+            Console.WriteLine("\nWas it a cat I saw?");
+            Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Was it a cat I saw"));
+            Console.WriteLine("\nSadiddy");
+            Console.WriteLine("Palindrome?: " + Palindrome.IsPalindrome("Sadiddy"));
         }
 
         public static void ViewCode()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("public static bool IsPalindrome(string word)");
+            Console.WriteLine("\n\npublic static bool IsPalindrome(string word)");
             Console.ResetColor();
             Console.WriteLine("\t{");
             Console.WriteLine("\t\tbool palindrome = true;");
             Console.WriteLine("\t\tint i;");
             Console.WriteLine("\t\tint k;");
+            Console.WriteLine("\t\tstring input = word.ToLower().Replace(\" \", String.Empty);");
             Console.WriteLine("\t\tfor (i = 0; i < word.Length; i++)");
             Console.WriteLine("\t\t{");
             Console.WriteLine("\t\t\tfor (k = word.Length - 1 - (1*i); k > i; k--)");
@@ -70,6 +71,12 @@ namespace algorithms.Fiddles
             Console.WriteLine("\t\t}");
             Console.WriteLine("\treturn palindrome;");
             Console.WriteLine("}");
+        }
+
+        public static void Demo()
+        {
+            ViewExamples();
+            ViewCode();
         }
     }
 

@@ -1,2 +1,7 @@
 C:\Users\u59a54\AppData\Local\Temporary Projects\algorithms\bin\Debug\algorithms.exe.config
 C:\PMT\shadiddles\algorithms\algorithms\bin\Debug\algorithms.exe.config
+C:\PMT\shadiddles\algorithms\algorithms\obj\Debug\algorithms.csprojResolveAssemblyReference.cache
+C:\PMT\shadiddles\algorithms\algorithms\bin\Debug\algorithms.exe
+C:\PMT\shadiddles\algorithms\algorithms\bin\Debug\algorithms.pdb
+C:\PMT\shadiddles\algorithms\algorithms\obj\Debug\algorithms.exe
+C:\PMT\shadiddles\algorithms\algorithms\obj\Debug\algorithms.pdb

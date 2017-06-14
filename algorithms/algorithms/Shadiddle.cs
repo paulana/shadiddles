@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
+using algorithms.Fiddles;
 
 namespace algorithms
 {
@@ -11,7 +12,7 @@ namespace algorithms
     {
         public static void Demo()
         {
-
+            Palindrome.Demo();
         }
 
         public static void Help()
