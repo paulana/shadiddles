@@ -77,6 +77,25 @@ namespace algorithms.Fiddles
         {
             ViewExamples();
             ViewCode();
+            EnterPalindrome();
+        }
+
+        private static void EnterPalindrome()
+        {
+            Console.Write("Enter your own palindrome (no punctuation):");
+            string[] quit =
+            {
+                "q",
+                "quit",
+                "exit",
+                "x"
+            };
+            string input = Console.ReadLine();
+            while (quit.Contains(input) == false)
+            {
+                Console.WriteLine("Palindrome?: " + IsPalindrome(input) + "\n\nAnother:");
+                input = Console.ReadLine();
+            }
         }
     }
 
