@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using algorithms.Fiddles;
 
 namespace algorithms
 {
@@ -10,9 +12,11 @@ namespace algorithms
     {
         static void Main(string[] args)
         {
+            Console.WindowWidth = 100;
             Console.WriteLine("Welcome to Shadiddles!  Pick your fiddles:");
             Console.WriteLine("Type 'intro' for an overview or 'help' for list of options.");
-            string input = Console.ReadLine();
+            args = args.Length > 0 ? args : (String.IsNullOrEmpty(Console.ReadLine()) ? new string[0] : Console.ReadLine().Trim().Split(' '));
+            
             string[] quit =
             {
                 "q",
@@ -21,11 +25,12 @@ namespace algorithms
                 "x"
             };
 
-            while (String.IsNullOrWhiteSpace(input) == false && quit.Contains(input.Trim().Split(' ')[0]) == false)
+            while (quit.Contains(args[0]) == false)
             {
-                switch (input.Trim().Split(' ')[0])
+                switch (args[0])
                 {
                     case "intro":
+                    case "demo":
                         Shadiddle.Demo();
                         break;
 
@@ -37,17 +42,15 @@ namespace algorithms
                         break;
 
                     case "list":
-                        Shadiddle.Questions(input.Trim().Split(' ')[1]);
+                        Shadiddle.Questions(args[1]);
                         break;
 
                     default:
                         break;
                 }
 
-                input = Console.ReadLine();
+                args = Console.ReadLine().Split(' ');
             }
         }
-
-        
     }
 }
