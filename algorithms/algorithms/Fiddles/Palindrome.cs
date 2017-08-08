@@ -10,27 +10,12 @@ namespace algorithms.Fiddles
     {
         public static bool IsPalindrome(string word)
         {
-            bool palindrome = true;
-            int i;
-            int k;
-            string input = word.ToLower().Replace(" ", String.Empty);
-            for (i = 0; i < input.Length; i++)
+            word = word.ToLower().Replace(" ", String.Empty);
+            for (int i = 0; i < word.Length; i++)
             {
-                for (k = input.Length - 1 - (1*i); k >= i; k--)
-                {
-                    if (input.ElementAt(i) != input.ElementAt(k))
-                    {
-                        palindrome = false;
-                        break;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
+                if (word[i] != word[word.Length - 1 - i]) return false;
             }
-
-            return palindrome;
+            return true;
         }
 
         public static void ViewExamples()
